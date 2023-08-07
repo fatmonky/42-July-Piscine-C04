@@ -6,11 +6,22 @@
 /*   By: pteh <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 18:03:51 by pteh              #+#    #+#             */
-/*   Updated: 2023/08/07 18:04:13 by pteh             ###   ########.fr       */
+/*   Updated: 2023/08/07 18:10:48 by pteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1,&c,1);
+}
+
 void	ft_putstr(char *str)
 {
-
+	while (*str)
+	{
+		ft_putchar(*str);
+		str++;
+	}
 }
