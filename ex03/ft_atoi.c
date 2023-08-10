@@ -6,7 +6,7 @@
 /*   By: pteh <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 11:19:08 by pteh              #+#    #+#             */
-/*   Updated: 2023/08/10 16:35:30 by pteh             ###   ########.fr       */
+/*   Updated: 2023/08/10 16:40:21 by pteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,14 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <limits.h>
+
+int	check_space(char c)
+{
+	if ((c > 8 && c <= 13) || (c == 32))
+		return (1);
+	else
+		return (0);
+}
 
 int	ft_atoi(char *str)
 {
@@ -24,8 +32,7 @@ int	ft_atoi(char *str)
 	return_val = 0;
 	negative_count = 0;
 	c = 0;
-	while ((str[c] > 8 && str[c] <= 13)
-		|| (str[c] == 32))
+	while (check_space(str[c]) == 1)
 		c++;
 	while (str[c] == '+' || str[c] == '-')
 	{
