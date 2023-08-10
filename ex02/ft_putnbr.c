@@ -6,7 +6,7 @@
 /*   By: pteh <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 18:12:45 by pteh              #+#    #+#             */
-/*   Updated: 2023/08/10 18:18:02 by pteh             ###   ########.fr       */
+/*   Updated: 2023/08/10 18:21:12 by pteh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -42,7 +42,7 @@ void	ft_putnbr(int nb)
 		ft_putnbr(nb % 10);
 	}	
 }
-
+/*
 int	main(void)
 {
 	ft_putnbr(0);
@@ -57,4 +57,4 @@ int	main(void)
 	printf("INT_MIN %d\n",INT_MIN);
 	ft_putnbr(INT_MIN);
 	write(1, "\n", 1);
-}
+}*/
